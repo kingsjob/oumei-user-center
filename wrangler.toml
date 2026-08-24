@@ -1,0 +1,15 @@
+name = "oumei-xboard-portal"
+main = "src/index.js"
+compatibility_date = "2026-08-01"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = true
+
+[vars]
+# 只写协议+域名，不要以 / 结尾。
+# 示例: https://core.example.com
+XBOARD_ORIGIN = "https://n1.huaguoshan.qzz.io"
+PORTAL_TITLE = "OU MEI 用户中心"
+SESSION_DAYS = "7"

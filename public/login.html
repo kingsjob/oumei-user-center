@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <meta name="referrer" content="no-referrer" />
+  <title>登录 · OU MEI 用户中心</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="auth-shell">
+    <section class="auth-intro">
+      <div class="brand-card">
+        <div class="brand-mark">O</div>
+        <div>
+          <p class="eyebrow">OU MEI</p>
+          <h1>欢迎回来</h1>
+          <p class="muted">登录后查看套餐、流量与订阅信息。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel auth-card" aria-labelledby="loginTitle">
+      <div class="auth-card-head">
+        <p class="eyebrow">ACCOUNT</p>
+        <h2 id="loginTitle">登录用户中心</h2>
+      </div>
+      <form id="loginForm" class="auth-form" autocomplete="on">
+        <label>邮箱
+          <input id="email" name="email" type="email" autocomplete="username" required placeholder="name@example.com" />
+        </label>
+        <label>密码
+          <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="请输入密码" />
+        </label>
+        <button id="loginButton" class="primary full" type="submit">登录</button>
+        <p id="loginError" class="error" role="alert"></p>
+      </form>
+      <div class="auth-footer">
+        <span class="muted">还没有账号？</span>
+        <a href="/register">创建账号</a>
+      </div>
+      <p class="version">OU MEI Portal V2</p>
+    </section>
+  </main>
+  <script type="module" src="/login.js"></script>
+</body>
+</html>

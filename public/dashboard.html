@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <meta name="referrer" content="no-referrer" />
+  <title>账户概览 · OU MEI 用户中心</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main id="dashboardApp" class="shell app">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">OU MEI · PORTAL V2</p>
+        <h1>账户概览</h1>
+      </div>
+      <div class="top-actions">
+        <span id="emailBadge" class="badge"></span>
+        <button id="refreshBtn" class="ghost" type="button">刷新</button>
+        <button id="logoutBtn" class="ghost" type="button">退出</button>
+      </div>
+    </header>
+
+    <section class="hero-grid">
+      <article class="panel plan-card">
+        <p class="card-label">当前套餐</p>
+        <h2 id="planName">—</h2>
+        <div class="meta-row"><span>到期时间</span><strong id="expireAt">—</strong></div>
+        <div class="meta-row"><span>流量重置</span><strong id="resetDay">—</strong></div>
+      </article>
+
+      <article class="panel traffic-card">
+        <div class="card-head">
+          <div>
+            <p class="card-label">本周期流量</p>
+            <h2><span id="usedTraffic">—</span> <small>/ <span id="totalTraffic">—</span></small></h2>
+          </div>
+          <strong id="trafficPercent" class="percent">0%</strong>
+        </div>
+        <div class="progress"><span id="trafficBar"></span></div>
+        <div class="traffic-meta">
+          <span>剩余 <strong id="remainingTraffic">—</strong></span>
+          <span>上传 <strong id="uploadTraffic">—</strong></span>
+          <span>下载 <strong id="downloadTraffic">—</strong></span>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel subscription-card">
+      <div>
+        <p class="card-label">订阅地址</p>
+        <h2>一键复制到客户端</h2>
+        <p class="muted">该地址由本站转发，不展示后台面板地址。</p>
+      </div>
+      <div class="sub-actions">
+        <input id="subscriptionUrl" readonly value="" />
+        <button id="copyBtn" class="primary" type="button">复制订阅</button>
+      </div>
+      <p id="copyState" class="status"></p>
+    </section>
+
+    <section class="content-grid">
+      <article class="panel">
+        <div class="section-title"><h2>最新公告</h2><button id="reloadNotices" class="text-btn" type="button">更新</button></div>
+        <div id="noticeList" class="notice-list"><p class="muted">正在读取…</p></div>
+      </article>
+
+      <article class="panel">
+        <div class="section-title"><h2>账户信息</h2></div>
+        <div class="info-list">
+          <div><span>邮箱</span><strong id="accountEmail">—</strong></div>
+          <div><span>注册时间</span><strong id="createdAt">—</strong></div>
+          <div><span>最近登录</span><strong id="lastLoginAt">—</strong></div>
+          <div><span>账户余额</span><strong id="balance">—</strong></div>
+        </div>
+      </article>
+    </section>
+  </main>
+  <script type="module" src="/dashboard.js"></script>
+</body>
+</html>

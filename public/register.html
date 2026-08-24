@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <meta name="referrer" content="no-referrer" />
+  <title>注册 · OU MEI 用户中心</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="auth-shell register-shell">
+    <section class="auth-intro">
+      <div class="brand-card">
+        <div class="brand-mark">O</div>
+        <div>
+          <p class="eyebrow">OU MEI</p>
+          <h1>创建账号</h1>
+          <p class="muted">注册完成后会直接进入你的用户中心。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel auth-card" aria-labelledby="registerTitle">
+      <div class="auth-card-head">
+        <a class="auth-back" href="/login">← 返回登录</a>
+        <p class="eyebrow">NEW ACCOUNT</p>
+        <h2 id="registerTitle">注册</h2>
+      </div>
+      <form id="registerForm" class="auth-form" autocomplete="on">
+        <label>邮箱
+          <input id="registerEmail" name="email" type="email" autocomplete="email" required placeholder="name@example.com" />
+          <span id="emailHint" class="form-hint"></span>
+        </label>
+
+        <div id="emailCodeRow" class="field-hidden">
+          <label>邮箱验证码
+            <span class="inline-field">
+              <input id="emailCode" name="emailCode" inputmode="numeric" maxlength="6" placeholder="6 位验证码" />
+              <button id="sendCodeButton" class="ghost compact" type="button">发送验证码</button>
+            </span>
+          </label>
+        </div>
+
+        <label id="inviteRow">邀请码 <span id="inviteOptional" class="label-note">（选填）</span>
+          <input id="inviteCode" name="inviteCode" autocomplete="off" placeholder="如有邀请码请填写" />
+        </label>
+
+        <label>密码
+          <input id="registerPassword" name="password" type="password" autocomplete="new-password" minlength="8" required placeholder="至少 8 位" />
+        </label>
+        <label>确认密码
+          <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" minlength="8" required placeholder="再次输入密码" />
+        </label>
+
+        <div id="captchaWrap" class="captcha-wrap field-hidden">
+          <div id="captchaWidget"></div>
+          <p id="captchaHint" class="form-hint">请完成人机验证。</p>
+        </div>
+
+        <button id="registerButton" class="primary full" type="submit" disabled>创建账号</button>
+        <p id="registerError" class="error" role="alert"></p>
+        <p id="registerStatus" class="status-line" role="status"></p>
+      </form>
+      <div class="auth-footer">
+        <span class="muted">已经有账号？</span>
+        <a href="/login">返回登录</a>
+      </div>
+      <p class="version">OU MEI Portal V2</p>
+    </section>
+  </main>
+  <script type="module" src="/register.js"></script>
+</body>
+</html>
